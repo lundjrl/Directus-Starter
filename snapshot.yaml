@@ -1,0 +1,466 @@
+version: 1
+directus: 12.0.3
+vendor: postgres
+collections:
+  - collection: Account
+    meta: null
+    schema:
+      name: Account
+  - collection: Comment
+    meta: null
+    schema:
+      name: Comment
+  - collection: UserInfo
+    meta: null
+    schema:
+      name: UserInfo
+  - collection: _prisma_migrations
+    meta: null
+    schema:
+      name: _prisma_migrations
+fields:
+  - collection: Account
+    field: bio
+    type: text
+    meta: null
+    schema:
+      name: bio
+      table: Account
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Account
+    field: id
+    type: integer
+    meta: null
+    schema:
+      name: id
+      table: Account
+      data_type: integer
+      default_value: nextval('"Account_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Account
+    field: userId
+    type: integer
+    meta: null
+    schema:
+      name: userId
+      table: Account
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: UserInfo
+      foreign_key_column: id
+  - collection: Comment
+    field: authorId
+    type: integer
+    meta: null
+    schema:
+      name: authorId
+      table: Comment
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: UserInfo
+      foreign_key_column: id
+  - collection: Comment
+    field: content
+    type: text
+    meta: null
+    schema:
+      name: content
+      table: Comment
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Comment
+    field: createdAt
+    type: dateTime
+    meta: null
+    schema:
+      name: createdAt
+      table: Comment
+      data_type: timestamp without time zone
+      default_value: CURRENT_TIMESTAMP
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Comment
+    field: id
+    type: integer
+    meta: null
+    schema:
+      name: id
+      table: Comment
+      data_type: integer
+      default_value: nextval('"Comment_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Comment
+    field: published
+    type: boolean
+    meta: null
+    schema:
+      name: published
+      table: Comment
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Comment
+    field: title
+    type: string
+    meta: null
+    schema:
+      name: title
+      table: Comment
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Comment
+    field: updatedAt
+    type: dateTime
+    meta: null
+    schema:
+      name: updatedAt
+      table: Comment
+      data_type: timestamp without time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: UserInfo
+    field: email
+    type: text
+    meta: null
+    schema:
+      name: email
+      table: UserInfo
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: UserInfo
+    field: id
+    type: integer
+    meta: null
+    schema:
+      name: id
+      table: UserInfo
+      data_type: integer
+      default_value: nextval('"UserInfo_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: UserInfo
+    field: name
+    type: text
+    meta: null
+    schema:
+      name: name
+      table: UserInfo
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: applied_steps_count
+    type: integer
+    meta: null
+    schema:
+      name: applied_steps_count
+      table: _prisma_migrations
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: checksum
+    type: string
+    meta: null
+    schema:
+      name: checksum
+      table: _prisma_migrations
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: finished_at
+    type: timestamp
+    meta: null
+    schema:
+      name: finished_at
+      table: _prisma_migrations
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: id
+    type: string
+    meta: null
+    schema:
+      name: id
+      table: _prisma_migrations
+      data_type: character varying
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: logs
+    type: text
+    meta: null
+    schema:
+      name: logs
+      table: _prisma_migrations
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: migration_name
+    type: string
+    meta: null
+    schema:
+      name: migration_name
+      table: _prisma_migrations
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: rolled_back_at
+    type: timestamp
+    meta: null
+    schema:
+      name: rolled_back_at
+      table: _prisma_migrations
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: _prisma_migrations
+    field: started_at
+    type: timestamp
+    meta: null
+    schema:
+      name: started_at
+      table: _prisma_migrations
+      data_type: timestamp with time zone
+      default_value: now()
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+relations:
+  - collection: Account
+    field: userId
+    related_collection: UserInfo
+    meta: null
+    schema:
+      table: Account
+      column: userId
+      foreign_key_table: UserInfo
+      foreign_key_column: id
+      constraint_name: Account_userId_fkey
+      on_update: CASCADE
+      on_delete: RESTRICT
+  - collection: Comment
+    field: authorId
+    related_collection: UserInfo
+    meta: null
+    schema:
+      table: Comment
+      column: authorId
+      foreign_key_table: UserInfo
+      foreign_key_column: id
+      constraint_name: Comment_authorId_fkey
+      on_update: CASCADE
+      on_delete: RESTRICT
